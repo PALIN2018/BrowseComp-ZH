@@ -3,12 +3,9 @@
 
 **BrowseComp-ZH** 是首个专为评估大型语言模型（LLMs）在中文网络生态中检索与推理能力而设计的高难度基准测试。受 [BrowseComp (Wei 等, 2025)](https://openai.com/index/browsecomp/) 启发，本项目针对中文信息环境构建了复杂的多跳检索与推理任务，模型需应对平台碎片化、语言特性及内容审查等多重挑战。
 
----
 ## 👥 作者
 
 Peilin Zhou, Bruce Leon, Xiang Ying, Can Zhang, Yifan Shao, Qichen Ye, Dading Chong, Zhiling Jin, Chenxuan Xie, Meng Cao, Yuxin Gu, Sixin Hong, Jing Ren, Jian Chen, Chao Liu, Yining Hua
-
----
 
 ## 🌟 项目亮点
 
@@ -30,8 +27,6 @@ BrowseComp-ZH/
 └── requirements.txt
 ```
 
----
-
 ## 🔐 数据访问
 BrowseComp-ZH 数据集包含 **289 个多跳检索推理问题**，所有问题均以中文撰写。
 
@@ -43,7 +38,6 @@ python data/browsecomp-zh-decrypt.py --input data/browsecomp-zh-encrypted.xlsx -
 ```
 系统将提示输入嵌入式密码（canary token）。
 
----
 ## 🏆 模型表现概览
 
 BrowseComp-ZH 测试了 20+ 个开源、闭源及智能检索增强型系统。以下是各模型在数据集上的表现概览：
@@ -73,7 +67,6 @@ BrowseComp-ZH 测试了 20+ 个开源、闭源及智能检索增强型系统。�
 | DeepSeek (Deep Think)    | AI搜索系统       | -            | 是           | 7.6%     | 65           | DeepSeek   |
 | DeepSeek (Standard)      | AI搜索系统       | -            | 是           | 4.8%     | 66           | DeepSeek   |
 
----
 
 ## 📊 模型表现总结
 
@@ -96,14 +89,11 @@ BrowseComp-ZH 测试了 20+ 个开源、闭源及智能检索增强型系统。�
 }
 ```
 
----
-
 ## 🤝 联系与贡献
 
 欢迎提问、建议或贡献代码！  
 请通过 issue 提交问题，或联系 [@PALIN2018](https://github.com/PALIN2018) 与我们交流。
 
----
 
 ## 🛡️ 许可协议
 

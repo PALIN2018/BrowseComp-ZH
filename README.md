@@ -4,13 +4,9 @@
 
 **BrowseComp-ZH** is the first high-difficulty benchmark specifically designed to evaluate the real-world web browsing and reasoning capabilities of large language models (LLMs) in the Chinese information ecosystem. Inspired by [BrowseComp (Wei et al., 2025)](https://openai.com/index/browsecomp/), BrowseComp-ZH targets the unique linguistic, structural, and retrieval challenges of the Chinese web, including fragmented platforms, implicit linguistic patterns, and content censorship.
 
----
-
 ## 👥 Authors
 
 Peilin Zhou, Bruce Leon, Xiang Ying, Can Zhang, Yifan Shao, Qichen Ye, Dading Chong, Zhiling Jin, Chenxuan Xie, Meng Cao, Yuxin Gu, Sixin Hong, Jing Ren, Jian Chen, Chao Liu, Yining Hua
-
----
 
 ## 🌟 Key Features
 
@@ -18,8 +14,6 @@ Peilin Zhou, Bruce Leon, Xiang Ying, Can Zhang, Yifan Shao, Qichen Ye, Dading Ch
 - 🧩 **Reverse-Engineered Multi-Hop Queries**: Each task starts from a known factual answer and is crafted with multiple constraints (e.g., time, entity type, description) to ensure high retrieval difficulty and answer uniqueness.
 - 🌐 **Tri-Engine Validation and Dual-Stage Quality Control**: All questions are verified across Baidu, Bing (China), and Google; a two-stage human-in-the-loop protocol filters out easily retrievable or ambiguous samples.
 - 🤖 **Comprehensive Benchmarking**: 20+ systems—including open-source LLMs, closed-source APIs, and agentic search systems—are evaluated to diagnose browsing and reasoning capabilities across different architectures.
-
----
 
 ## 📁 Repository Structure
 
@@ -34,8 +28,6 @@ BrowseComp-ZH/
 └── requirements.txt
 ```
 
----
-
 ## 🔐 Dataset Access
 
 The BrowseComp-ZH dataset contains **289 complex multi-hop retrieval and reasoning questions**, spanning 11 domains including Film & TV, Technology, Medicine, and History.
@@ -47,8 +39,6 @@ To decrypt the dataset:
 python data/browsecomp-zh-decrypt.py --input data/browsecomp-zh-encrypted.xlsx --output data/browsecomp-zh-decrypted.xlsx
 ```
 You will be prompted for a canary token embedded within the file.
-
----
 
 ## 🏆 Model Performance Overview
 
@@ -77,8 +67,6 @@ You will be prompted for a canary token embedded within the file.
 | DeepSeek (Deep Think)     | AI Search Product | -         | Yes      | 7.6%     | 65                     | DeepSeek   |
 | DeepSeek (Standard)       | AI Search Product | -         | Yes      | 4.8%     | 66                     | DeepSeek   |
 
----
-
 ## 📊 Key Findings
 
 - 📉 **Most standalone LLMs achieve less than 10% accuracy on BrowseComp-ZH**, reflecting the benchmark’s difficulty.
@@ -86,8 +74,6 @@ You will be prompted for a canary token embedded within the file.
 - 🔍 **Retrieval-augmented systems significantly outperform pure LLMs**, with DeepResearch achieving the highest accuracy (42.9%).
 - 🔄 **Multi-hop retrieval pipelines are critical**: Single-shot retrieval systems (e.g., DeepSeek, Kimi) struggle to meet task complexity.
 - 📈 **Calibration error correlates with retrieval-reasoning effectiveness**, highlighting challenges in confidence estimation during browsing.
-
----
 
 ## 📎 Citation
 
@@ -102,14 +88,10 @@ If you use BrowseComp-ZH in your research, please cite:
 }
 ```
 
----
-
 ## 🤝 Contact & Contribution
 
 We welcome questions, suggestions, and contributions!  
 Please open an issue or contact [@PALIN2018](https://github.com/PALIN2018).
-
----
 
 ## 🛡️ License
 
