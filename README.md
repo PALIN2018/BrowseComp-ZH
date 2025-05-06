@@ -4,6 +4,8 @@
 
 **BrowseComp-ZH** is the first high-difficulty benchmark specifically designed to evaluate the real-world web browsing and reasoning capabilities of large language models (LLMs) in the Chinese information ecosystem. Inspired by [BrowseComp (Wei et al., 2025)](https://openai.com/index/browsecomp/), BrowseComp-ZH targets the unique linguistic, structural, and retrieval challenges of the Chinese web, including fragmented platforms, implicit linguistic patterns, and content censorship.
 
+📄 [Paper Link（arXiv）](https://arxiv.org/pdf/2504.19314)
+
 ## 👥 Authors
 
 Peilin Zhou, Bruce Leon, Xiang Ying, Can Zhang, Yifan Shao, Qichen Ye, Dading Chong, Zhiling Jin, Chenxuan Xie, Meng Cao, Yuxin Gu, Sixin Hong, Jing Ren, Jian Chen, Chao Liu, Yining Hua
@@ -48,6 +50,8 @@ You will be prompted for a canary token embedded within the file.
 | DeepSeek-R1               | Open-Source       | Yes       | No       | 23.2%    | 59                     | DeepSeek   |
 | Qwen2.5-72B-Instruct      | Open-Source       | No        | No       | 6.6%     | 62                     | Alibaba    |
 | QwQ-32B                   | Open-Source       | Yes       | No       | 11.1%    | 64                     | Alibaba    |
+| Qwen3-235B-A22B (Non-Thinking)| Open-Source         | No           | No           | 8.0%    | 80           | Alibaba    |
+| Qwen3-235B-A22B (Thinking)| Open-Source         | Yes           | No           | 13.2%    | 67           | Alibaba    |
 | LlaMa4                    | Open-Source       | No        | No       | 4.8%     | 70                     | Meta       |
 | GPT4o                     | Closed-Source     | No        | No       | 6.2%     | 73                     | OpenAI     |
 | O1                        | Closed-Source     | Yes       | No       | 29.1%    | 52                     | OpenAI     |
@@ -80,11 +84,11 @@ You will be prompted for a canary token embedded within the file.
 If you use BrowseComp-ZH in your research, please cite:
 
 ```bibtex
-@misc{browsecompzh2025,
+@article{zhou2025browsecomp,
   title={BrowseComp-ZH: Benchmarking Web Browsing Ability of Large Language Models in Chinese},
-  author={Peilin Zhou and Bruce Leon and Xiang Ying and Can Zhang and Yifan Shao and Qichen Ye and Dading Chong and Zhiling Jin and Chenxuan Xie and Meng Cao and Yuxin Gu and Sixin Hong and Jing Ren and Jian Chen and Chao Liu and Yining Hua},
-  year={2025},
-  url={https://github.com/PALIN2018/BrowseComp-ZH}
+  author={Zhou, Peilin and Leon, Bruce and Ying, Xiang and Zhang, Can and Shao, Yifan and Ye, Qichen and Chong, Dading and Jin, Zhiling and Xie, Chenxuan and Cao, Meng and others},
+  journal={arXiv preprint arXiv:2504.19314},
+  year={2025}
 }
 ```
 

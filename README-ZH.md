@@ -3,6 +3,8 @@
 
 **BrowseComp-ZH** 是首个专为评估大型语言模型（LLMs）在中文网络生态中检索与推理能力而设计的高难度基准测试。受 [BrowseComp (Wei 等, 2025)](https://openai.com/index/browsecomp/) 启发，本项目针对中文信息环境构建了复杂的多跳检索与推理任务，模型需应对平台碎片化、语言特性及内容审查等多重挑战。
 
+📄 [项目论文链接（arXiv）](https://arxiv.org/pdf/2504.19314)
+
 ## 👥 作者
 
 Peilin Zhou, Bruce Leon, Xiang Ying, Can Zhang, Yifan Shao, Qichen Ye, Dading Chong, Zhiling Jin, Chenxuan Xie, Meng Cao, Yuxin Gu, Sixin Hong, Jing Ren, Jian Chen, Chao Liu, Yining Hua
@@ -13,7 +15,6 @@ Peilin Zhou, Bruce Leon, Xiang Ying, Can Zhang, Yifan Shao, Qichen Ye, Dading Ch
 - 🧩 **高难度逆向设计与多跳推理**：每道题目均从已知答案逆向构建，融合时间、类别、描述等多维约束，要求跨平台、多步检索与推理。
 - 🌐 **三引擎验证与双阶段质量控制**：所有问题经百度、必应（中国版）、谷歌三引擎交叉验证，并通过人工与机器双重审核，确保检索难度和答案唯一性。
 - 🤖 **全面基准测试，推动智能体发展**：覆盖 20+ 种开源、闭源及检索增强型模型，系统揭示当前 LLM 在中文多跳检索与推理中的核心瓶颈，助力检索增强智能体系统演进。
-
 ## 📁 仓库结构
 
 ```
@@ -47,6 +48,8 @@ BrowseComp-ZH 测试了 20+ 个开源、闭源及智能检索增强型系统。�
 | DeepSeek-V3              | 开源模型         | 否           | 否           | 8.7%     | 72           | DeepSeek   |
 | DeepSeek-R1              | 开源模型         | 是           | 否           | 23.2%    | 59           | DeepSeek   |
 | Qwen2.5-72B-Instruct     | 开源模型         | 否           | 否           | 6.6%     | 62           | Alibaba    |
+| Qwen3-235B-A22B (Non-Thinking)| 开源模型         | 否           | 否           | 8.0%    | 80           | Alibaba    |
+| Qwen3-235B-A22B (Thinking)| 开源模型         | 是           | 否           | 13.2%    | 67           | Alibaba    |
 | QwQ-32B                  | 开源模型         | 是           | 否           | 11.1%    | 64           | Alibaba    |
 | LlaMa4                   | 开源模型         | 否           | 否           | 4.8%     | 70           | Meta       |
 | GPT4o                    | 闭源模型         | 否           | 否           | 6.2%     | 73           | OpenAI     |
@@ -81,11 +84,11 @@ BrowseComp-ZH 测试了 20+ 个开源、闭源及智能检索增强型系统。�
 如果您在研究中使用了 BrowseComp-ZH，请引用如下：
 
 ```bibtex
-@misc{browsecompzh2025,
+@article{zhou2025browsecomp,
   title={BrowseComp-ZH: Benchmarking Web Browsing Ability of Large Language Models in Chinese},
-  author={Peilin Zhou and Bruce Leon and Xiang Ying and Can Zhang and Yifan Shao and Qichen Ye and Dading Chong and Zhiling Jin and Chenxuan Xie and Meng Cao and Yuxin Gu and Sixin Hong and Jing Ren and Jian Chen and Chao Liu and Yining Hua},
-  year={2025},
-  url={https://github.com/PALIN2018/BrowseComp-ZH}
+  author={Zhou, Peilin and Leon, Bruce and Ying, Xiang and Zhang, Can and Shao, Yifan and Ye, Qichen and Chong, Dading and Jin, Zhiling and Xie, Chenxuan and Cao, Meng and others},
+  journal={arXiv preprint arXiv:2504.19314},
+  year={2025}
 }
 ```
 
