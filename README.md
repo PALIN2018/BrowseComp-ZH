@@ -30,6 +30,15 @@ BrowseComp-ZH/
 └── requirements.txt
 ```
 
+## 🛠️ Environment Installation
+
+```bash
+cd BrowseComp-ZH
+conda create --name BrowseComp python=3.12
+conda activate BrowseComp
+pip install -r requirements.txt
+```
+
 ## 🔐 Dataset Access
 
 The BrowseComp-ZH dataset contains **289 complex multi-hop retrieval and reasoning questions**, spanning 11 domains including Film & TV, Technology, Medicine, and History.
@@ -38,9 +47,29 @@ To prevent unauthorized pretraining and preserve the evaluation value of the dat
 To decrypt the dataset:
 
 ```bash
-python data/browsecomp-zh-decrypt.py --input data/browsecomp-zh-encrypted.xlsx --output data/browsecomp-zh-decrypted.xlsx
+python data/browsecomp-zh-decrypt.py --input data/browsecomp-zh-encrypted.xlsx --output data/browsecomp-zh-decrypted.xlsx --json_output raw_data/browsecomp-zh-decrypted.json
 ```
 You will be prompted for a canary token embedded within the file.
+
+## 📊Evaluation
+
+The evaluation is divided into two parts: model evaluation and result statistics.
+
+```bash
+cd BrowseComp-ZH
+# model evaluation
+bash run.sh
+# result statistics
+python run_acc_calibration_error.py
+```
+
+### Folder Structure
+
+* raw_data：json format evaluation dataset
+* predict_data：detailed model responses
+* eval_data：gpt-4o answer extraction results
+* output_data：final evaluation results
+* outcome_data：acc and calibration_error statistics
 
 ## 🏆 Model Performance Overview
 
