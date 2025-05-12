@@ -28,6 +28,15 @@ BrowseComp-ZH/
 └── requirements.txt
 ```
 
+## 🛠️ 环境安装
+
+```bash
+cd BrowseComp-ZH
+conda create --name BrowseComp python=3.12
+conda activate BrowseComp
+pip install -r requirements.txt
+```
+
 ## 🔐 数据访问
 BrowseComp-ZH 数据集包含 **289 个多跳检索推理问题**，所有问题均以中文撰写。
 
@@ -35,9 +44,29 @@ BrowseComp-ZH 数据集包含 **289 个多跳检索推理问题**，所有问题
 
 ### 解密数据集
 ```bash
-python data/browsecomp-zh-decrypt.py --input data/browsecomp-zh-encrypted.xlsx --output data/browsecomp-zh-decrypted.xlsx
+python data/browsecomp-zh-decrypt.py --input data/browsecomp-zh-encrypted.xlsx --output data/browsecomp-zh-decrypted.xlsx --json_output raw_data/browsecomp-zh-decrypted.json
 ```
 系统将提示输入嵌入式密码（canary token）。
+
+## 📊 评测运行
+
+评测分为两部分，模型评测和结果统计。
+
+```bash
+cd BrowseComp-ZH
+# 模型评测
+bash run.sh
+# 结果统计
+python run_acc_calibration_error.py
+```
+
+### 文件夹解析
+
+* raw_data：json格式评测数据集
+* predict_data：各大模型回复结果
+* eval_data：gpt-4o答案提取结果
+* output_data：最终评测结果
+* outcome_data：acc和calibration_error统计结果
 
 ## 🏆 模型表现概览
 
