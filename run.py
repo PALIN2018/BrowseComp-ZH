@@ -126,6 +126,7 @@ class BrowsecampEval:
                         model=model_name,
                         system=SYSTEM_PROMPT_CN,
                         messages=messages[1:],
+                        max_tokens=8000,
                         temperature=0.6,
                         top_p=0.95,
                     )

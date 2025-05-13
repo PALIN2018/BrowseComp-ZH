@@ -28,7 +28,10 @@ def process_model_data(model, input_path):
     for record in records:
         eval_res = record['eval_result'][0]
         is_correct = eval_res['is_correct'].lower()
-        confidence = int(eval_res['model_extracted_confidence'].split('%')[0])
+        try:
+            confidence = int(eval_res['model_extracted_confidence'].split('%')[0])
+        except:
+            confidence = 0
         
         # Count correct/incorrect/None results
         if is_correct == 'yes':
